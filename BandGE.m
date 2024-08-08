@@ -1,4 +1,5 @@
-% perform Gaussian Elimination on a matrix A (size n x n) with 
+% solves a linear system Ax = b by performing
+% Gaussian Elimination on a matrix A (size n x n) with 
 % upper bandwidth p and lower bandwidth q
 
 % e.g. a diagonal matrix has upper bandwidth 0 and lower bandwidth 0
@@ -6,7 +7,7 @@
 
 % runtime: O(npq)
 function x = BandGE(A, b, p, q)
-    [n, m] = size(A);
+    [m, n] = size(A);
     
     x = zeros(n, 1);
     
