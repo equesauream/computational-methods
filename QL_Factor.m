@@ -12,11 +12,14 @@ function [Q, L] = QL_Factor(A)
     
     % get triangular part
     for k = n:-1:1
+        % compute the Hausholder reflector of vk
         x = A(1:k, k);
         vk = x;
         vk(k) = vk(k) + sign(x(1)) * norm(x);
         vk = vk/norm(vk);
         v(1:k, k) = vk;
+
+        % apply the Hausholder transformation to the relevant block
         for j = 1:k
             A(1:k, j) = A(1:k, j) - 2 * vk * (vk' * A(1:k, j));
         end

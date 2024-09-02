@@ -3,7 +3,7 @@
 % upper bandwidth p and lower bandwidth q
 
 % e.g. a diagonal matrix has upper bandwidth 0 and lower bandwidth 0
-% whereas a tridiagonal matrix has upper bandwidth 1 and lower bandwidth 0
+% whereas an upper Hessenberg matrix has upper bandwidth 1 and lower bandwidth 0
 
 % runtime: O(npq)
 function x = BandGE(A, b, p, q)

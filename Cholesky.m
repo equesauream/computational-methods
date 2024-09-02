@@ -16,5 +16,4 @@ function G = Cholesky(A)
         op = ( A(i + 1:n, i) * A(i + 1:n, i).' ) / A(i, i);
         A(i + 1:n, i + 1:n) = A(i + 1:n, i + 1:n) - op;
     end
-
 end

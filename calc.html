@@ -9,9 +9,9 @@
 
         <form action="javascript:makeMatrix(m.value, n.value)">
             <p>Size of matrix:</p>
-            <input type="text" id="m" size="1">
+            <input type="text" id="m" size=1>
             <span> x </span>
-            <input type="text" id="n" size="1"><br><br>
+            <input type="text" id="n" size=1><br><br>
             <input type="submit" value="create matrix" value="Update"/>
         </form>
 
@@ -27,8 +27,9 @@
                     for (var j = 1; j <= n; ++j) {
                         const inp = document.createElement("input");
                         inp.type = "text";
-                        inp.size = "1";
+                        inp.size = 1;
                         inp.id = "a" + m + n;
+                        inp.name = "a" + m + n;
                         document.body.appendChild(inp);
                     }
                     const linebreak = document.createElement("br");
@@ -41,6 +42,7 @@
                 for (var i = 1; i <= m; ++i) {
                     var nextRow = [];
                     for (var j = 1; j <= n; ++n) {
+                        console.log(document.getElementById("a" + m + n).value);
                         nextRow.append(document.getElementById("a" + m + n).value);
                     }
                     numbers.append(nextRow);

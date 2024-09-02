@@ -1,4 +1,10 @@
-% iterative approach to solving a system Ax = b
+% iterative approach to solving a system Ax = b based on initial guess x_initial
+
+% Gauss-Seidel uses update matrix M = D - L, where D is the diagonal of A, and L
+% is the lower triangle of A
+
+% use maxiter for the max number of iterations, and tol for the error bound
+% i.e. return x such that ||Ax - b|| <= tol * ||b||
 function [x, iter] = GaussSeidel(A, b, x_initial, maxiter, tol)
 
     xold = x_initial;
